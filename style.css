@@ -470,6 +470,90 @@ body.dark .hero-bg-text {
     font-weight: 500;
 }
 
+/* Experience Section */
+.experience {
+    background: var(--bg-primary);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.experience-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+}
+
+.experience-company {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.experience-duration {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.experience-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+/* Experience header with logo */
+.experience-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company-logo {
+    width: 60%;
+    height: 30%;
+    object-fit:cover;
+    background: white;
+    padding: 6px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Dark mode fix */
+body.dark .company-logo {
+    background: var(--bg-tertiary);
+}
+
 /* Skills Section */
 .skills {
     background: var(--bg-secondary);
@@ -574,13 +658,13 @@ body.dark .hero-bg-text {
   display: block;
   margin-left: 2.5rem;
 }
-.achievement-video{
-    max-width: 500px;
-  max-height: 150px;
-  
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: 2.5rem;
+.achievement-video {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
 }
 .achievement-card h3 {
     font-size: 1.2rem;
